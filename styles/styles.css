@@ -6,35 +6,34 @@ body{
   width: 100vw;
 }
 .steps{
-    display: flex;
-    gap: 5rem;
-}
-.step{
-    border: 5px solid grey;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-}
-.step::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 1px); /* Espacio entre los elementos y la línea */
-    width: 85px; /* Longitud de la línea */
-    height: 5px; /* Grosor de la línea */
-    background-color: gray; /* Color de la línea */
-    transform: translateY(-50%);
-    color: gray;
+    width: 75%;
+    border: 2px solid black;
 
 }
+ 
+.container{
+  display: flex;
+  width: 100%;
+  border: 2px solid black;
+  justify-content: space-between;
+}
+.circle{
+  border: 2px solid grey;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.linea-horizontal{
 
+  position: absolute;
+  width: 75%;
+  top: 48%;
+  z-index: -1;border-top: 3px solid transparent; /* Establecer un borde superior transparente */
+  background-image:linear-gradient(to right, red 25%, blue 25%, blue 50%, green 50%, green 75%, pink 75%, pink 100%);
+  background-size: 100% 2px;
+}
 
-    .step:last-child::after {
-
-        display: none; /* Oculta la línea después del último elemento */
-      }
