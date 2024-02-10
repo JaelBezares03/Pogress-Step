@@ -1,24 +1,30 @@
 body{
     display: flex;
+    flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: #fcf7ff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .steps{
     width: 75%;
-    border: 2px solid black;
+    border: 0.3px solid black;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
 
 }
  
 .container{
   display: flex;
   width: 100%;
-  border: 2px solid black;
-  justify-content: space-between;
+
+  align-items: center;
 }
 .circle{
-  border: 2px solid grey;
+  border: 2px solid #dee2e6;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -26,14 +32,81 @@ body{
   justify-content: center;
   align-items: center;
   background-color: white;
+  transition: border 0.5s
 }
+
+
+
 .linea-horizontal{
 
-  position: absolute;
-  width: 75%;
+  width: 20%;
   top: 48%;
-  z-index: -1;border-top: 3px solid transparent; /* Establecer un borde superior transparente */
-  background-image:linear-gradient(to right, red 25%, blue 25%, blue 50%, green 50%, green 75%, pink 75%, pink 100%);
+
+  border-top: 2px solid #dee2e6; 
   background-size: 100% 2px;
+  transition: border 0.3s
 }
 
+
+.activo{
+ border:2px solid #00cecb;
+ transition: border 0.3s ;
+}
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.button{
+  padding: 0.2rem 1.4rem;
+  border:1px solid #00cecb ;
+  background-color: white;
+  color: #00cecb;
+}
+.button:hover{
+background-color: #00cecb;
+color: white;
+
+}
+footer{
+  width: 100%;
+  height: 7rem;
+  background-color: black;
+  display: flex ;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  align-items: end;
+}
+.contacto{
+  display: flex;
+  margin: 5px;
+
+}
+.container-img{
+  height: 25px;
+  width: 25px;
+  display: flex;
+  
+  align-items: center;
+}
+.container_contacts{
+  display: flex;
+  gap: 1rem;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+p{
+  margin: 10px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
